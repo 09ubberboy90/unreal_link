@@ -9,7 +9,7 @@ from sensor_msgs.msg import JointState
 class MinimalPublisher(Node):
 
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('republisher')
         self.publisher_ = self.create_publisher(Bool, 'right_hand/trigger', 10)
         self.sub_ = self.create_subscription(EBool, 'bp/right_hand/trigger',self.listener_callback, 10)
         # self.sub2_ = self.create_subscription(JointState, 'joint_states_sim_right',self.joint_callback, 10)
