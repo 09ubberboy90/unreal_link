@@ -21,7 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             "republisher = unreal_link.republisher:main",
-            "pose_save = unreal_link.pose_save:main"
         ],
     },
 )
