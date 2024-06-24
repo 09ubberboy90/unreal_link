@@ -13,7 +13,7 @@ class MinimalPublisher(Node):
         self.publisher_ = self.create_publisher(Bool, 'right_hand/trigger', 10)
         self.sub_ = self.create_subscription(EBool, 'bp/baxter/right_hand/trigger',self.listener_callback, 10)
         self.publisher2_ = self.create_publisher(Bool, 'left_hand/trigger', 10)
-        self.sub2_ = self.create_subscription(EBool, 'bp/baxter/left_hand/trigger',self.listener_callback2, 10)
+        self.sub2_ = self.create_subscription(EBool, 'bp/ur/left_hand/trigger',self.listener_callback2, 10)
         print("Republisher started")
 
     def listener_callback(self, msg):
